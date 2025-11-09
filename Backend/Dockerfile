@@ -1,5 +1,5 @@
 # Use an official Maven image for the build
-FROM maven:3.8.8-eclipse-temurin-17 AS build
+FROM maven:3.8.8-eclipse-temurin-21 AS build
 WORKDIR /app
 
 # Copy project files
@@ -12,7 +12,7 @@ RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # Use a lightweight JRE for running the app
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 
 # Copy jar from the build stage
