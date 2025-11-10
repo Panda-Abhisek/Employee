@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const URL = "http://localhost:8080/api/employee";
+// const URL = "http://192.168.1.70:8080/api/employee";
 
 const Home = () => {
   const [name, setName] = useState("");
